@@ -40,7 +40,7 @@ function renderTable(data) {
       <tr>
         <td>${index + 1}</td>
         <td>${record.name}</td>
-        <td>${record.uid}</td>
+        <td>${record.matricNumber}</td>
         <td>${date}</td>
         <td>${time}</td>
       </tr>
@@ -55,7 +55,7 @@ searchInput.addEventListener("input", () => {
 
   const filteredData = attendanceData.filter(record =>
     record.name.toLowerCase().includes(searchValue) ||
-    record.uid.toLowerCase().includes(searchValue)
+    record.maticNumber.toLowerCase().includes(searchValue)
   );
 
   renderTable(filteredData);
